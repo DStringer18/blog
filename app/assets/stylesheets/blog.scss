@@ -1,0 +1,51 @@
+$yellow: #fde951;
+$dark-blue: #1d4d6b;
+$light-blue: #8EE3EF;
+$white: #e6f0e8;
+$black: #230007;
+$grey: #ece9e9;
+$spacer: 2rem;
+
+body {
+  padding: 2rem;
+  font-family: 'Open Sans';
+  line-height: 1.4;
+  color: $dark-blue;
+  background-color: $white;
+}
+
+h1 { font-size: 2rem; }
+
+
+.post-title {
+  font-weight: bold;
+}
+
+article {
+  padding: 2rem;
+  background-color: #ffffff;
+}
+
+code {
+  color: $black;
+}
+pre {
+  background-color: $light-blue;
+}
+a {
+  text-decoration: none;
+  color: $black;
+}
+
+.shrink {
+  max-height: 300px;
+}
+
+.fade-bottom {
+  -webkit-mask-image: linear-gradient(180deg, #000 80%, transparent);
+}
+
+.article_photo {
+  max-width: 300px;
+  margin: 0 auto;
+}

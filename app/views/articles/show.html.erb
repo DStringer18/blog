@@ -1,0 +1,24 @@
+<header class="mb-4">
+  <div class="d-flex flex-row">
+    <div class="flex-item">
+      <%= link_to articles_path do %>
+        <%= icon('fa-solid', 'arrow-left') %>
+      <% end %>
+    </div>
+    <div class="flex-item px-2"><% t(:title) %></div>
+  </div>
+</header>
+<article>
+  <div>
+    <h3 class="post-title"><%= @article.title %></h3>
+    <div class="my-3"><%= @article.date_display %></div>
+    <% if @article.photo %>
+      <%= markdown @article.photo %>
+    <% end %>
+    <div class="my-4"><%= markdown @article.body %> </div>
+  </div>
+  <% if admin_signed_in? %>
+    <%= link_to "Edit", edit_article_path(@article) %>
+    <%= link_to "Archive", archive_article_path(@article), data: {turbo_method: "post"} %>
+  <% end %>
+</article>

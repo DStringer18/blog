@@ -1,0 +1,29 @@
+<h1>Copywriting Portfolio</h1>
+
+<div class="row justify-content-around">
+  <% if @articles.present? %>
+    <% @articles.each do |article| %>
+      <div class="card col-md-5 m-3">
+        <%= link_to article, class: "overflow-hidden shrink fade-bottom" do %>
+          <h5 class="card-head text-center ">
+            <%= article.title %>
+          </h5>
+          <div class="card-body">
+            <% if article.photo %>
+              <div class="article_photo">
+                <%= markdown article.photo %>
+              </div>
+            <% end %>
+            <%= article.body %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+<% if admin_signed_in? %>
+  <div class="text-center">
+    <%= link_to "New Article", new_article_path %>
+    <%= link_to "Archived Articles", archived_path %>
+  </div>
+<% end %>
