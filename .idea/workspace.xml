@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08dce87b-09ca-43cd-b151-18490a377bc8" name="Changes" comment="refactor site for blog and copy">
+    <list default="true" id="08dce87b-09ca-43cd-b151-18490a377bc8" name="Changes" comment="prepare for deploy">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dylans_blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dylans_blog.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
@@ -180,7 +182,7 @@
       <updated>1658324440347</updated>
       <workItem from="1658324441746" duration="18130000" />
       <workItem from="1658429317286" duration="34304000" />
-      <workItem from="1658821282862" duration="20184000" />
+      <workItem from="1658821282862" duration="20659000" />
     </task>
     <task id="LOCAL-00001" summary="refactor site for blog and copy">
       <created>1658837812914</created>
@@ -189,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658837812914</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="prepare for deploy">
+      <created>1658850596421</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1658850596421</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +217,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="refactor site for blog and copy" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor site for blog and copy" />
+    <MESSAGE value="prepare for deploy" />
+    <option name="LAST_COMMIT_MESSAGE" value="prepare for deploy" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/dylans_blog@Development__dylans_blog.rcov" NAME="Development: dylans_blog Coverage Results" MODIFIED="1658833898800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="dylans_blog" />
