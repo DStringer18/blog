@@ -4,31 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08dce87b-09ca-43cd-b151-18490a377bc8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controllers/credits_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/blogs/archived.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/copies/archived.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/credits/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dylans_blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dylans_blog.iml" afterDir="false" />
+    <list default="true" id="08dce87b-09ca-43cd-b151-18490a377bc8" name="Changes" comment="refactor site for blog and copy">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/images/copywriting.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/images/copywriting.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/blog.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/blog.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/articles_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/articles_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/article.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/article.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/comment.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/articles/blog_index.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/articles/copy_index.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/articles/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/articles/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20220720134913_create_comments.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20220721054201_add_archived_at_to_articles.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20220722155834_add_kind_to_articles.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20220723212933_add_photo_to_articles.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/comments.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/comment_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,8 +180,16 @@
       <updated>1658324440347</updated>
       <workItem from="1658324441746" duration="18130000" />
       <workItem from="1658429317286" duration="34304000" />
-      <workItem from="1658821282862" duration="12103000" />
+      <workItem from="1658821282862" duration="20184000" />
     </task>
+    <task id="LOCAL-00001" summary="refactor site for blog and copy">
+      <created>1658837812914</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1658837812914</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,6 +205,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="refactor site for blog and copy" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor site for blog and copy" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/dylans_blog@Development__dylans_blog.rcov" NAME="Development: dylans_blog Coverage Results" MODIFIED="1658833898800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="dylans_blog" />
