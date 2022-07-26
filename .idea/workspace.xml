@@ -5,17 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08dce87b-09ca-43cd-b151-18490a377bc8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/blog.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/lib/enum.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/concerns/archivable.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/articles/_form.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/articles/archived.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/articles/blog_index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/articles/copy_index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/articles/edit.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/articles/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/articles/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/articles/show.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/credits_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/blogs/archived.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/copies/archived.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/credits/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dylans_blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dylans_blog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/images/copywriting.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/images/copywriting.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/blog.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/blog.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/articles_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/articles_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/article.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/article.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/comment.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/articles/blog_index.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/articles/copy_index.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/articles/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/articles/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20220720134913_create_comments.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20220721054201_add_archived_at_to_articles.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20220722155834_add_kind_to_articles.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20220723212933_add_photo_to_articles.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/comments.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/comment_test.rb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +56,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2CD5iA1iN1js5M0OgCdHHSRqRVi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -52,13 +66,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/dylan/dylans_blog",
+    "last_opened_file_path": "/home/dylan/dylans_blog/app/assets/images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "ruby.rails.projectView.checked": "true"
+    "ruby.rails.projectView.checked": "true",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -66,6 +81,11 @@
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/assets/images" />
+    </key>
+  </component>
   <component name="RunManager" selected="Rails.Development: dylans_blog">
     <configuration name="Development: dylans_blog" type="RailsRunConfigurationType" factoryName="Rails">
       <module name="dylans_blog" />
@@ -180,6 +200,7 @@
       <updated>1658324440347</updated>
       <workItem from="1658324441746" duration="18130000" />
       <workItem from="1658429317286" duration="34304000" />
+      <workItem from="1658821282862" duration="12103000" />
     </task>
     <servers />
   </component>
@@ -198,6 +219,6 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/dylans_blog@Development__dylans_blog.rcov" NAME="Development: dylans_blog Coverage Results" MODIFIED="1658592483231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="dylans_blog" />
+    <SUITE FILE_PATH="coverage/dylans_blog@Development__dylans_blog.rcov" NAME="Development: dylans_blog Coverage Results" MODIFIED="1658833898800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="dylans_blog" />
   </component>
 </project>

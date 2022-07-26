@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blog</title>
+    <title>Wander In My Time</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,8 +11,20 @@
   </head>
 
   <body>
-    <div class="container-fluid">
+    <header class="text-center pt-4">
+      <h1><%= t(:title) %></h1>
+    </header>
+    <div class="container-fluid p-4">
       <%= yield %>
     </div>
+    <footer class="d-flex flex-row-reverse">
+      <div class="flex-item mx-3"><%= link_to 'about the author', "https://dylanrigg.com", class:"footer_link" %></div>
+      <% unless controller_name == 'credits' %>
+        <div class="flex-item mx-3"><%= link_to 'credits', credits_path, class:"footer_link" %></div>
+      <% end %>
+    </footer>
   </body>
+
+
+
 </html>

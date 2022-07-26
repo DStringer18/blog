@@ -1,0 +1,56 @@
+<header class="mb-4">
+  <div class="d-flex flex-row">
+    <div class="flex-item">
+      <%= link_to blogs_path do %>
+        <%= icon('fa-solid', 'arrow-left') %>
+      <% end %>
+    </div>
+    <div class="flex-item px-2"><% t(:title) %></div>
+  </div>
+</header>
+<article>
+  <div>
+    <h3 class="post-title"><%= @blog.title %></h3>
+    <div class="my-3"><%= @blog.date_display %></div>
+    <% if @blog.photo %>
+      <%= markdown @blog.photo %>
+    <% end %>
+    <div class="my-4"><%= markdown @blog.body %> </div>
+  </div>
+  <% if admin_signed_in? %>
+    <%= button_to "Edit", edit_blog_path(@blog), class: "btn btn-sm" %>
+    <%= button_to "Archive", archive_blog_path(@blog), data: {turbo_method: "post"}, class: "btn btn-sm" %>
+  <% end %>
+  <hr>
+  <h2>Add a comment:</h2>
+  <%= form_with model: [ @blog, @blog.comments.build ] do |form| %>
+    <p>
+      <%= form.label :commenter %><br>
+      <%= form.text_field :commenter %>
+    </p>
+    <p>
+      <%= form.label :body %><br>
+      <%= form.text_area :body %>
+    </p>
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
+  <hr>
+  <% if @blog.comments.present? %>
+    <h2>Comments</h2>
+  <% end %>
+  <% @blog.comments.each do |comment| %>
+    <p>
+      <strong>Commenter:</strong>
+      <%= comment.commenter %>
+    </p>
+
+    <p>
+      <strong>Comment:</strong>
+      <%= comment.body %>
+    </p>
+  <% end %>
+
+</article>
+

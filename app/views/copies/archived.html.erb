@@ -1,8 +1,8 @@
-<h1>Copywriting Portfolio</h1>
+<h1>Archived Blogs</h1>
 
-<div class="row justify-content-around">
-  <% if @articles.present? %>
-    <% @articles.each do |article| %>
+<ul>
+  <% if @copies.present? %>
+    <% @copies.each do |article| %>
       <div class="card col-md-5 m-3">
         <%= link_to article, class: "overflow-hidden shrink fade-bottom" do %>
           <h5 class="card-head text-center ">
@@ -14,16 +14,15 @@
                 <%= markdown article.photo %>
               </div>
             <% end %>
-            <%= article.body %>
+            <%= markdown article.body %>
           </div>
         <% end %>
+        <br>
+
+        <%= button_to "Unarchive", unarchive_copy_path(article), data: {turbo_method: "post"}, class: "btn" %>
       </div>
     <% end %>
   <% end %>
-</div>
-<% if admin_signed_in? %>
-  <div class="text-center">
-    <%= link_to "New Article", new_article_path %>
-    <%= link_to "Archived Articles", archived_path %>
-  </div>
-<% end %>
+</ul>
+
+<%= link_to "Copywriting", copies_path %>

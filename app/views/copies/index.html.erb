@@ -1,0 +1,37 @@
+<header class="mb-4">
+  <div class="d-flex flex-row align-items-center">
+    <div class="flex-item">
+      <%= link_to articles_path do %>
+        <%= icon('fa-solid', 'arrow-left') %>
+      <% end %>
+    </div>
+    <div class="flex-item px-3"><h1>Portfolio</h1></div>
+  </div>
+</header>
+
+<div id="copies" class="row gx-0 justify-content-around">
+  <% @copies.each do |article| %>
+    <div class="card col-md-5 m-3">
+      <%= link_to article, class: "overflow-hidden shrink fade-bottom" do %>
+        <h5 class="card-header text-center ">
+          <%= article.title %>
+        </h5>
+        <div class="card-body">
+          <% if article.photo %>
+            <div class="article_photo">
+              <%= markdown article.photo %>
+            </div>
+          <% end %>
+          <%= markdown article.body %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+<% if admin_signed_in? %>
+  <div class="text-center">
+    <%= link_to "New Copy", new_copy_path, class:"p-3" %>
+    <%= link_to "Archived Copies", archived_copies_path, class:"p-3" %>
+  </div>
+<% end %>
