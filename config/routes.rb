@@ -1,14 +1,6 @@
 Rails.application.routes.draw do
-  devise_scope :admin do
-    get "/sign_in" => "devise/sessions#new" # custom path to login/sign_in
-    get "/sign_up" => "devise/registrations#new", as: "new_admin_registration" # custom path to sign_up/registration
-  end
 
-  devise_for :admins, :skip => [:registrations]
-  as :admin do
-    get 'admins/edit' => 'devise/registrations#edit', :as => 'edit_admin_registration'
-    put 'admins' => 'devise/registrations#update', :as => 'user_registration'
-  end
+  devise_for :admins
 
 
   resources :copies do
