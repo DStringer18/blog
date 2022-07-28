@@ -2,7 +2,6 @@ Rails.application.routes.draw do
 
   devise_for :admins
 
-
   resources :copies, path: 'portfolio' do
     member do
       post :archive
