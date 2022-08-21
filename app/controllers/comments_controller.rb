@@ -1,8 +1,9 @@
 class CommentsController < ApplicationController
+  skip_before_action authenticate_admin!
   def create
-    @blog = Blog.find(params[:blog_id])
-    @comment = @blog.comments.create(comment_params)
-    redirect_to blog_path(@blog)
+    @article = Article.find(params[:article_id])
+    @comment = @article.comments.create(comment_params)
+    redirect_to article_path(@article)
   end
 
   private

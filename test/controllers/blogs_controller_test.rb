@@ -6,43 +6,43 @@ class BlogsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get index" do
-    get blogs_url
+    get articles_url
     assert_response :success
   end
 
   test "should get new" do
-    get new_blog_url
+    get new_article_url
     assert_response :success
   end
 
   test "should create blog" do
     assert_difference("Blog.count") do
-      post blogs_url, params: { blog: {  } }
+      post articles_url, params: { blog: {  } }
     end
 
-    assert_redirected_to blog_url(Blog.last)
+    assert_redirected_to article_url(Blog.last)
   end
 
   test "should show blog" do
-    get blog_url(@blog)
+    get article_url(@blog)
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_blog_url(@blog)
+    get edit_article_url(@blog)
     assert_response :success
   end
 
   test "should update blog" do
-    patch blog_url(@blog), params: { blog: {  } }
-    assert_redirected_to blog_url(@blog)
+    patch article_url(@blog), params: { blog: {  } }
+    assert_redirected_to article_url(@blog)
   end
 
   test "should destroy blog" do
     assert_difference("Blog.count", -1) do
-      delete blog_url(@blog)
+      delete article_url(@blog)
     end
 
-    assert_redirected_to blogs_url
+    assert_redirected_to articles_url
   end
 end

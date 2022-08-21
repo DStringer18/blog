@@ -12,13 +12,45 @@
   <div>
     <h3 class="post-title"><%= @article.title %></h3>
     <div class="my-3"><%= @article.date_display %></div>
-    <% if @article.photo %>
-      <%= markdown @article.photo %>
+    <% if @article.image.present? %>
+      <%= image_tag @article.image.variant(:header) %>
     <% end %>
     <div class="my-4"><%= markdown @article.body %> </div>
   </div>
   <% if admin_signed_in? %>
-    <%= link_to "Edit", edit_article_path(@article) %>
-    <%= link_to "Archive", archive_article_path(@article), data: {turbo_method: "post"} %>
+    <%= button_to "Edit", edit_article_path(@article), class: "btn btn-sm", method: "get" %>
+    <%= button_to "Archive", archive_article_path(@article), data: {turbo_method: "post"}, class: "btn btn-sm" %>
   <% end %>
+  <hr>
+  <h2>Add a comment:</h2>
+  <%= form_with model: [ @article, @article.comments.build ] do |form| %>
+    <p>
+      <%= form.label :commenter %><br>
+      <%= form.text_field :commenter %>
+    </p>
+    <p>
+      <%= form.label :body %><br>
+      <%= form.text_area :body %>
+    </p>
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
+  <hr>
+  <% if @article.comments.present? %>
+    <h2>Comments</h2>
+  <% end %>
+  <% @article.comments.each do |comment| %>
+    <p>
+      <strong>Commenter:</strong>
+      <%= comment.commenter %>
+    </p>
+
+    <p>
+      <strong>Comment:</strong>
+      <%= comment.body %>
+    </p>
+  <% end %>
+
 </article>
+

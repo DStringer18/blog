@@ -6,12 +6,12 @@ class BlogsTest < ApplicationSystemTestCase
   end
 
   test "visiting the index" do
-    visit blogs_url
+    visit articles_url
     assert_selector "h1", text: "Blogs"
   end
 
   test "should create blog" do
-    visit blogs_url
+    visit articles_url
     click_on "New blog"
 
     click_on "Create Blog"
@@ -21,7 +21,7 @@ class BlogsTest < ApplicationSystemTestCase
   end
 
   test "should update Blog" do
-    visit blog_url(@blog)
+    visit article_url(@blog)
     click_on "Edit this blog", match: :first
 
     click_on "Update Blog"
@@ -31,7 +31,7 @@ class BlogsTest < ApplicationSystemTestCase
   end
 
   test "should destroy Blog" do
-    visit blog_url(@blog)
+    visit article_url(@blog)
     click_on "Destroy this blog", match: :first
 
     assert_text "Blog was successfully destroyed"

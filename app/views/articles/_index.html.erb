@@ -1,0 +1,28 @@
+<div id="articles" class="row gx-0 justify-content-around">
+  <% if @articles.present? %>
+    <% @articles.each do |article| %>
+      <div class="card col-md-5 m-5">
+        <%= link_to article, class: "overflow-hidden shrink fade-bottom" do %>
+          <h5 class="card-header text-center p-3">
+            <%= article.title %>
+          </h5>
+          <div class="card-body p-3 d-flex align-content-center flex-column mr-auto">
+            <% if article.image.attached? %>
+              <div class="article_image">
+                <%= image_tag article.image.variant(:thumb) %>
+              </div>
+            <% end %>
+            <%= markdown article.body %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<% if admin_signed_in? %>
+  <div class="text-center">
+    <%= link_to "New Article", new_article_path, class:"p-3" %>
+    <%= link_to "Archived Articles", archived_articles_path, class:"p-3" %>
+  </div>
+<% end %>

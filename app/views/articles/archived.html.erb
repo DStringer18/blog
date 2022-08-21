@@ -1,12 +1,26 @@
 <h1>Archived Articles</h1>
 
 <ul>
-  <% @articles.each do |article| %>
-    <li>
-      <%= link_to article.title, article %>
-      <%= link_to "Unarchive", unarchive_article_path(article), data: {turbo_method: "post"} %>
-    </li>
-  <% end %>
+    <% if @articles.present? %>
+      <% @articles.each do |article| %>
+        <div class="card col-md-5 m-3">
+          <%= link_to article, class: "overflow-hidden shrink fade-bottom" do %>
+            <h5 class="card-head text-center ">
+              <%= article.title %>
+            </h5>
+            <div class="card-body">
+              <% if article.image.present? %>
+                <%= image_tag article.image.variant(:header) %>
+              <% end %>
+              <%= markdown article.body %>
+            </div>
+          <% end %>
+          <br>
+
+          <%= button_to "Unarchive", unarchive_article_path(article), data: {turbo_method: "post"}, class: "btn" %>
+        </div>
+      <% end %>
+    <% end %>
 </ul>
 
-<%= link_to "Articles", articles_path %>
+<%= link_to "Article", articles_path %>

@@ -31,7 +31,20 @@
 
 en:
   hello: "Hello world"
-  title: "Wander In My Time"
+  title: "WonderLust"
+  nav:
+    home: home
+    who_we_are: who we are
+    travel_with_us: travel with us
+  welcome:
+    about_us: "We are a group of endlessly curious readers, travelers, and tour guides who want to share the most interesting things we've discovered about this magical planet we all live on. Whether it is the food we eat, the things we worship, the paths we travel or the stories we tell, all of us have lives full of curious cultural differences and that is what we celebrate here."
+  articles:
+    title: articles
+    food: curious cuisine
+    traditions: vibrant traditions
+    architecture: outstanding structures
+    landscapes: fantastic landscapes
+    history: exceptional history
   enum:
     article/kind:
       copy: Copy

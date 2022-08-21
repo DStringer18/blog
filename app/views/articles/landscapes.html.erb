@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+<header class="mb-4">
+  <div class="d-flex flex-row align-items-center">
+    <div class="flex-item">
+      <%= link_to articles_path do %>
+        <i class="fa-solid fa-arrow-left"></i>
+      <% end %>
+    </div>
+    <div class="flex-item px-3"><h1><%= t('articles.landscapes') %></h1></div>
+  </div>
+</header>
+
+<%= render 'index' %>

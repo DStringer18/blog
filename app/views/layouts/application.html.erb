@@ -7,14 +7,43 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "blog", "data-turbo-track": "reload" %>
     <%#= javascript_importmap_tags %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
   <body>
-    <header class="text-center pt-4">
-      <h1><%= t(:title) %></h1>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <%= link_to t(:title), :root, class:"navbar-brand" %>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item"><%= link_to t('nav.who_we_are'), about_us_path, class:"nav-link" %></li>
+              <li class="nav-item"><%= link_to t('nav.travel_with_us'), tours_path, class:"nav-link" %></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarArticlesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <%= t('articles.title') %>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarArticlesDropdown">
+                  <li class="nav-item"><%= link_to t('articles.food'), food_path, class:"nav-link px-2" %></li>
+                  <li><%= link_to t('articles.traditions'), traditions_path, class:"nav-link px-2" %></li>
+                  <li><%= link_to t('articles.architecture'), architecture_path, class:"nav-link px-2" %></li>
+                  <li><%= link_to t('articles.landscapes'), landscapes_path, class:"nav-link px-2" %></li>
+                  <li><%= link_to t('articles.history'), history_path, class:"nav-link px-2" %></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
+    <h1><%#= t(:title) %></h1>
     <div class="container-fluid p-4">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
       <%= yield %>
     </div>
     <footer class="d-flex flex-row-reverse">

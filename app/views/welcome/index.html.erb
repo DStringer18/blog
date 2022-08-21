@@ -1,0 +1,56 @@
+<div class="row justify-content-around mb-3">
+
+  <div class="image-container d-flex align-items-center justify-content-center col-md-4 m-3 px-0">
+    <%= link_to food_path do %>
+      <div>
+        <%= image_tag("cuisine.jpg", class: "image") %>
+      </div>
+      <div class="middle">
+        <h3 class="text"><%= t('articles.food') %></h3>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="image-container d-flex align-items-center justify-content-center col-md-4 m-3 px-0">
+    <%= link_to traditions_path do %>
+      <div>
+        <%= image_tag("tradition.jpg", class: "image") %>
+      </div>
+      <div class="middle">
+        <h3 class="text"><%= t('articles.traditions') %></h3>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="image-container d-flex align-items-center justify-content-center col-md-4 m-3 px-0">
+    <%= link_to architecture_path do %>
+      <div>
+        <%= image_tag("architecture.jpg", class: "image") %>
+      </div>
+      <div class="middle">
+        <h3 class="text"><%= t('articles.architecture') %></h3>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="image-container d-flex align-items-center justify-content-center col-md-4 m-3 px-0">
+    <%= link_to landscapes_path do %>
+      <div>
+        <%= image_tag("landscape.jpg", class: "image") %>
+      </div>
+      <div class="middle">
+        <h3 class="text"><%= t('articles.landscapes') %></h3>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="image-container d-flex align-items-center justify-content-center col-md-4 m-3 px-0">
+    <%= link_to history_path do %>
+      <%= image_tag("history.jpg", class: "image") %>
+      <div class="middle">
+        <h3 class="text"><%= t('articles.history') %></h3>
+      </div>
+    <% end %>
+  </div>
+
+</div>
