@@ -17,6 +17,13 @@
   </div>
 
   <div>
+    <br>
+    <%= form.label :image, "Upload an image" %>
+    <br>
+    <%= form.file_field :image, style: "width: 80%" %>
+  </div>
+
+  <div>
     <%= form.label :description, style: "display: block" %>
     <%= form.text_area :description %>
   </div>

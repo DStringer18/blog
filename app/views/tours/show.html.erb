@@ -1,10 +1,17 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @tour %>
-
 <div>
-  <%= link_to "Edit this tour", edit_tour_path(@tour) %> |
-  <%= link_to "Back to tours", tours_path %>
-
-  <%= button_to "Destroy this tour", @tour, method: :delete %>
+  <h3 class="post-title"><%= @tour.name %></h3>
+  <% if @tour.image.present? %>
+    <%= image_tag @tour.image.variant(:header) %>
+  <% end %>
+  <div class="my-4"><%= markdown @tour.description %> </div>
 </div>
+<% if admin_signed_in? %>
+  <div>
+    <%= link_to "Edit this tour", edit_tour_path(@tour) %> |
+    <%= link_to "Back to tours", tours_path %>
+
+    <%= button_to "Destroy this tour", @tour, method: :delete %>
+  </div>
+<% end %>
