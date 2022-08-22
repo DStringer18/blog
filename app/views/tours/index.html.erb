@@ -1,14 +1,38 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Tours</h1>
+<header class="mb-4">
+  <div class="d-flex flex-row align-items-center">
+    <div class="flex-item">
+      <%= link_to welcome_path do %>
+        <i class="fa-solid fa-arrow-left"></i>
+      <% end %>
+    </div>
+    <div class="flex-item px-3"><h1>Tours</h1></div>
+  </div>
+</header>
 
-<div id="tours">
-  <% @tours.each do |tour| %>
-    <%= render tour %>
-    <p>
-      <%= link_to "Show this tour", tour %>
-    </p>
+<div id="tours" class="row gx-0 justify-content-around">
+  <% if @tours.present? %>
+    <% @tours.each do |tour| %>
+      <div class="card col-md-5 m-5">
+        <%= link_to tour, class: "overflow-hidden shrink fade-bottom" do %>
+          <h5 class="card-header text-center p-3">
+            <%= tour.title %>
+          </h5>
+          <div class="card-body p-3 d-flex align-content-center flex-column mr-auto">
+            <% if tour.image.attached? %>
+              <div class="tour_image">
+                <%= image_tag tour.image.variant(:thumb) %>
+              </div>
+            <% end %>
+            <%= markdown tour.body %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
   <% end %>
 </div>
 
-<%= link_to "New tour", new_tour_path %>
+<% if admin_signed_in? %>
+    <%= link_to "New tour", new_tour_path %>
+<% end %>

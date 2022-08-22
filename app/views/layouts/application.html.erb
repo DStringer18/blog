@@ -47,7 +47,6 @@
       <%= yield %>
     </div>
     <footer class="d-flex flex-row-reverse">
-      <div class="flex-item mx-3"><%= link_to 'about the author', "https://dylanrigg.com", class:"footer_link" %></div>
       <% unless controller_name == 'credits' %>
         <div class="flex-item mx-3"><%= link_to 'credits', credits_path, class:"footer_link" %></div>
       <% end %>
