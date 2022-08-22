@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_scope :admin do
     get "/sign_in" => "devise/sessions#new" # custom path to login/sign_in
     get "/sign_up" => "devise/registrations#new", as: "new_admin_registration" # custom path to sign_up/registration
+    get "/sign_out" => "devise/registrations#destroy"
   end
 
   devise_for :admins
