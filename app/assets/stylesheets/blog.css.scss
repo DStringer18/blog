@@ -86,13 +86,14 @@ a {
 
 .image-container {
   position: relative;
-  height: 500px;
+  height: 400px;
+  margin: 2rem 2rem;
 }
 
 .image {
   opacity: 1;
-  display: block;
-  max-height: 300px;
+  width: 450px;
+  max-width: 100%;
   transition: .5s ease;
   backface-visibility: hidden;
 }
