@@ -3,6 +3,30 @@
     <div class="flex-item px-2"><% t(:title) %></div>
   </div>
 </header>
+
+<% case @article.category.downcase %>
+<% when "architecture" %>
+  <%= link_to architecture_path do %>
+    <i class="fa-solid fa-arrow-left mb-3"></i>
+  <% end %>
+<% when "food" %>
+  <%= link_to food_path do %>
+    <i class="fa-solid fa-arrow-left mb-3"></i>
+  <% end %>
+<% when "history" %>
+  <%= link_to history_path do %>
+    <i class="fa-solid fa-arrow-left mb-3"></i>
+  <% end %>
+<% when "landscapes" %>
+  <%= link_to landscapes_path do %>
+    <i class="fa-solid fa-arrow-left mb-3"></i>
+  <% end %>
+<% when "traditions" %>
+  <%= link_to traditions_path do %>
+    <i class="fa-solid fa-arrow-left mb-3"></i>
+  <% end %>
+<% end %>
+
 <article>
   <div>
     <h3 class="post-title"><%= @article.title %></h3>

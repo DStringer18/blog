@@ -21,7 +21,7 @@
 </div>
 
 <% if admin_signed_in? %>
-  <div class="text-center">
+  <div class="text-center admin-links">
     <%= link_to "New Article", new_article_path, class:"p-3" %>
     <%= link_to "Archived Articles", archived_articles_path, class:"p-3" %>
   </div>

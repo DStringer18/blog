@@ -40,12 +40,15 @@ en:
     about_us: "We are a group of endlessly curious readers, travelers, and tour guides who want to share the most interesting things we've discovered about this magical planet we all live on. Whether it is the food we eat, the things we worship, the paths we travel or the stories we tell, all of us have lives full of curious cultural differences and that is what we celebrate here."
   articles:
     title: articles
-    food: curious cuisine
-    traditions: vibrant traditions
-    architecture: outstanding structures
-    landscapes: fantastic landscapes
-    history: exceptional history
+    food: Curious Cuisine
+    traditions: Vibrant Traditions
+    architecture: Outstanding Structures
+    landscapes: Fantastic Landscapes
+    history: Exceptional History
   enum:
-    article/kind:
-      copy: Copy
-      blog: Blog
+    article/category:
+      food: FOOD
+      architecture: ARCHITECTURE
+      landscapes: LANDSCAPES
+      history: HISTORY
+      traditions: TRADITIONS
