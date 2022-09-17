@@ -127,8 +127,21 @@ a {
 //food page
 
 .food-container {
+  height: 100vh;
+  z-index: 1;
+}
+
+.food-container::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
   background: image-url('food_background.jpg') no-repeat;
   background-size: cover;
+  opacity: 0.2;
 }
 
 //tradition page
