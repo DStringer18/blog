@@ -6,6 +6,8 @@ $black: #230007;
 $grey: #ece9e9;
 $dark: #212529;
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+
 .nav-link {
   color: $light-blue;
 }
@@ -15,7 +17,7 @@ $dark: #212529;
 }
 
 body {
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
   line-height: 1.4;
   color: $dark-blue;
   background-color: $white;
@@ -117,11 +119,12 @@ a {
   opacity: 1;
 }
 
-.text {
+.article-tile-text {
   background-color: $light-blue;
   color: $dark;
   font-size: 16px;
   padding: 16px 32px;
+  letter-spacing: 0.2em;
 }
 
 //food page
