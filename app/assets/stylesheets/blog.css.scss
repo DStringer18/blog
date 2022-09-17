@@ -127,5 +127,81 @@ a {
 //food page
 
 .food-container {
-  //background-image: asset-path('../images/food_background.jpg');
+  background: image-url('food_background.jpg') no-repeat;
+  background-size: cover;
+}
+
+//tradition page
+.tradition-container {
+  height: 100vh;
+  z-index: 1;
+}
+
+.tradition-container::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background: image-url('tradition_background.jpg') no-repeat;
+  background-size: cover;
+  opacity: 0.2;
+}
+
+//architecture page
+.architecture-container {
+  height: 100vh;
+  z-index: 1;
+}
+
+.architecture-container::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background: image-url('architecture_background2.jpg') no-repeat;
+  background-size: cover;
+  opacity: 0.2;
+}
+//landscape page
+.landscape-container {
+  height: 100vh;
+  z-index: 1;
+}
+
+.landscape-container::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background: image-url('landscape_background.jpg') no-repeat;
+  background-size: cover;
+  opacity: 0.2;
+}
+
+//history page
+.history-container {
+  height: 100vh;
+  z-index: 1;
+}
+
+.history-container::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background: image-url('history_background.jpg') no-repeat;
+  background-size: cover;
+  opacity: 0.2;
 }
